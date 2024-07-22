@@ -1,6 +1,7 @@
 import subprocess
 import os
 
+
 def set_proxy(proxy_address, proxy_port):
     try:
         # Thiết lập proxy cho hệ thống
@@ -19,6 +20,7 @@ def set_proxy(proxy_address, proxy_port):
     except Exception as e:
         print("Đã xảy ra lỗi:", e)
 
+
 def disable_proxy():
     try:
         # Tắt proxy cho hệ thống
@@ -30,13 +32,13 @@ def disable_proxy():
             # apt_conf.write(f'Acquire::http::Proxy "http://{proxy_address}:{proxy_port}";\n')
             # apt_conf.write(f'Acquire::https::Proxy "http://{proxy_address}:{proxy_port}";\n')
 
-
         # if os.path.exists('/etc/apt/apt.conf'):
         #     os.remove('/etc/apt/apt.conf')
 
         print("Proxy đã được tắt thành công.")
     except Exception as e:
         print("Đã xảy ra lỗi khi tắt proxy:", e)
+
 
 try:
     # Kiểm tra kết nối mạng
@@ -58,7 +60,7 @@ try:
     # Print the active connections
     print("Active Wi-Fi connections:", active_connections)
 
-    name_vvn20206205 =  active_connections[0]
+    name_vvn20206205 = active_connections[0]
 
     if name_vvn20206205 == "vvn20206205":
         print(f"🚀 Có kết nối vvn20206205")

@@ -14,6 +14,7 @@ def set_proxy_git(proxy_address, proxy_port):
     except subprocess.CalledProcessError as e:
         print(f"Failed to set proxy: {e}")
 
+
 def disable_proxy_git():
     try:
         subprocess.run(["git", "config", "--global", "--unset", "http.proxy"], check=True)
