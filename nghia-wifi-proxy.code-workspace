@@ -1,0 +1,12 @@
+{
+  "extensions": { "recommendations": [] },
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "contents"
+    }
+  ],
+  "settings": {}
+}

@@ -1,0 +1,5 @@
+# Bỏ qua tất cả mọi thứ trong thư mục
+*
+
+# Nhưng không bỏ qua tệp .gitignore
+!.gitignore
