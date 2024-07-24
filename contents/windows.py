@@ -6,21 +6,21 @@ import winreg
 import time
 
 
-def set_proxy_git(proxy_address, proxy_port):
-    proxy_url = f"http://{proxy_address}:{proxy_port}"
-    try:
-        subprocess.run(["git", "config", "--global", "http.proxy", proxy_url], check=True)
-        print(f"Proxy set to {proxy_url}")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to set proxy: {e}")
+# def set_proxy_git(proxy_address, proxy_port):
+#     proxy_url = f"http://{proxy_address}:{proxy_port}"
+#     try:
+#         subprocess.run(["git", "config", "--global", "http.proxy", proxy_url], check=True)
+#         print(f"Proxy set to {proxy_url}")
+#     except subprocess.CalledProcessError as e:
+#         print(f"Failed to set proxy: {e}")
 
 
-def disable_proxy_git():
-    try:
-        subprocess.run(["git", "config", "--global", "--unset", "http.proxy"], check=True)
-        print("Proxy has been disabled.")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to disable proxy: {e}")
+# def disable_proxy_git():
+#     try:
+#         subprocess.run(["git", "config", "--global", "--unset", "http.proxy"], check=True)
+#         print("Proxy has been disabled.")
+#     except subprocess.CalledProcessError as e:
+#         print(f"Failed to disable proxy: {e}")
 
 
 def set_proxy(proxy_address, proxy_port):
@@ -65,7 +65,7 @@ if name_vvn20206205 in data_infor:
 else:
     print(f"🚀 Không kết nối {name_vvn20206205}")
     disable_proxy()
-    disable_proxy_git()
+    # disable_proxy_git()
     exit()
 
 
@@ -86,5 +86,5 @@ proxy_port = "10809"
 print(f"🚀 {proxy_address}")
 print(f"🚀 {proxy_port}")
 set_proxy(proxy_address, proxy_port)
-set_proxy_git(proxy_address, proxy_port)
+# set_proxy_git(proxy_address, proxy_port)
 time.sleep(1)
